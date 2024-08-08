@@ -1,0 +1,54 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI Generator Test
+  description: ''
+  version: 1.0.0
+tags: []
+paths:
+  /test:
+    post:
+      summary: Test
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                structured:
+                  $ref: '#/components/schemas/Structured'
+              required:
+                - structured
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security: []
+components:
+  schemas:
+    Structured:
+      type: object
+      properties:
+        issuer:
+          $ref: '#/components/schemas/Type'
+        reference:
+          type: string
+      required:
+        - reference
+        - issuer
+    Type:
+      type: object
+      properties:
+        issuer:
+          type: string
+      required:
+        - issuer
+  securitySchemes: {}
+servers: []
