@@ -1,0 +1,1 @@
+# api-with-type-component
